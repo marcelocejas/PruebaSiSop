@@ -28,7 +28,7 @@
         int newfd;        // descriptor de socket de nueva conexión aceptada
         char buf[256];    // buffer para datos del cliente
         int nbytes;
-        int yes=1;        // para setsockopt() SO_REUSEADDR, más abajo
+         int yes=1;        // para setsockopt() SO_REUSEADDR, más abajo
         int addrlen;
         int i, j;
         FD_ZERO(&master);    // borra los conjuntos maestro y temporal
@@ -75,8 +75,7 @@
                     if (i == listener) {
                         // gestionar nuevas conexiones
                         addrlen = sizeof(remoteaddr);
-                        if ((newfd = accept(listener, (struct sockaddr *)&remoteaddr,
-                                                                 &addrlen)) == -1) {
+                        if ((newfd = accept(listener, (struct sockaddr *)&remoteaddr,&addrlen)) == -1) {
                             perror("accept");
                         } else {
                             FD_SET(newfd, &master); // añadir al conjunto maestro
