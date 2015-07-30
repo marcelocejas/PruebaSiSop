@@ -3,7 +3,7 @@
  Name        : ServerConThreads.c
  Author      : marcelocejas
  Version     :
- Copyright   : 
+ Copyright   : https://gist.github.com/silv3rm00n
  Description : C socket server example, handles multiple clients using threads//  gcc server.c -lpthread -o server
  ============================================================================
  */
